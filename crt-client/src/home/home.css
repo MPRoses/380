@@ -68,8 +68,7 @@
   top: 10px;
   left: 40px;
 
-  color: white;
-  mix-blend-mode: difference;
+  color: black;
   z-index: 1000;
   display: flex;
 
@@ -80,7 +79,7 @@
   line-height: 40px;
 
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out, color 1s cubic-bezier(.49, .99, .62, .97);
 }
 
 #logo-other-container {

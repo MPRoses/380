@@ -4,6 +4,8 @@ import "./App.css";
 import Home from './home/home';
 import $ from "jquery";
 
+import {ScrollContainer, ScrollPage} from "react-scroll-motion";
+
 
 const App = ({ children }) => {
 
@@ -22,11 +24,10 @@ const App = ({ children }) => {
   //       <div> Hello, {(typeof backendData.user === 'undefined') ? (<p>loading...</p>) : (<p>{backendData.user}</p>)}!</div>
 
   return (
-      <div className="App">
-
-       <Home />
+    <div className="App">
+            <Home />
   
-      </div>
+    </div>
   );
 }
 

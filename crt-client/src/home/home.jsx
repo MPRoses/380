@@ -7,13 +7,19 @@ import $ from "jquery";
 import login from '../img/login.png';
 import centralimage from '../img/voorbeeld1.png';
 
+import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
+
 const Home = ({ children }) => {
   // todo change navbar <p> to <a> 
 
+  const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
+
    $( function () {
+
+    // preloader
     $("#logo-container").css("opacity", "1");
     setTimeout(() => {
-      
+          $("#logo-container").css("color", "white")
       $(".fadein").css("opacity", "1");
       $("#left-background").css("transition",  "left 1s cubic-bezier(.49, .99, .62, .97)");
       $("#left-background").css("left",  "-50vw");
@@ -22,6 +28,7 @@ const Home = ({ children }) => {
       $("#centralimage").css("animation", "bounce2 6s cubic-bezier(0.280, 0.840, 0.420, 1) 1 forwards");
       setTimeout(() => {
         $("#navbar-item-2").css("animation", "bounce 2s cubic-bezier(0.280, 0.840, 0.420, 1) 1 forwards")
+        
         setTimeout(() => {
         $("#navbar-item-1").css("animation", "bounce 2s cubic-bezier(0.280, 0.840, 0.420, 1) 1 forwards")
       }, 250);
@@ -30,6 +37,16 @@ const Home = ({ children }) => {
         $("#left-background").css("transition",  "left 0s");
       }, 650)
     }, 2750);
+
+    /*$(window).scroll(function () { 
+      var a = ($(window).scrollTop() / window.innerHeight)
+      if (a < 1) {
+        $("#left-background").css("left", `calc(-50vw + ${a} * 50vw)`)
+      } else {
+        $("#left-background").css("left", '0')
+      }
+    })*/
+
 
   })
 
