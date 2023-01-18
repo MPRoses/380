@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+@font-face {
+  font-family: 'RubikSlantedP';
+  src: url('../fonts/RubikSlantedP.otf')
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+#left-background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  background-color: #1E2120;
+
+  transition: left 0s;
+}
+
+#login-container {
+  position: fixed;
+  right: 10px;
+  top: -7.5px;
+
+  overflow: hidden;
+
+  width: 50px;
+  height: 55%;
+}
+
+#login {
+  transform: scale(1);
+
+  width: auto;
+  height: 54%;
+
+}
+
+#login-text {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+
+  color: #000000;
+
+  transform: rotate(-90deg);
+
+  text-align: right;
+  width: max-content;
+
+  position: relative;
+  top: 30px;
+  left: -17.5px;
+
+}
+
+#login:hover {
+  cursor: pointer;
+}
+
+#logo-container {
+  width: auto;
+  height: auto;
+  position: fixed;
+  top: 10px;
+  left: 40px;
+
+  color: white;
+  mix-blend-mode: difference;
+  z-index: 1000;
+  display: flex;
+
+  font-family: 'RubikSlantedP';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 40px;
+
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#logo-other-container {
+  overflow: hidden;
+}
+
+#logo-other {
+  position: relative;
+  left: -90%;
+
+  transition: left .5s cubic-bezier(.49, .99, .62, .97);
+}
+
+#get-better-grades {
+  transform: rotate(270deg);
+
+  position: absolute;
+  text-align: left;
+
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+
+  color: #FFFFFF;
+
+  left: 35px;
+  top: 100px;
+
+  z-index: 3;
+}
+
+.fadein {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#navbar {
+  display: flex;
+  position: absolute;
+  top: 5px;
+  right: 75px;
+
+}
+
+.navbar-item {
+  margin-right: 75px;
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 15px;
+
+  transition: opacity .5s cubic-bezier(.49, .99, .62, .97);
+  transform: translateY(-100px);
+}
+
+#navbar-item-1:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+#navbar-item-2:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+#navbar-item-3:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(.9, 1.1) translateY(-100px);
+  }
+
+  25% {
+    transform: scale(1.05, .95) translateY(0);
+  }
+
+  50% {
+    transform: scale(1, 1) translateY(-4px);
+  }
+
+  75% {
+    transform: scale(1, 1) translateY(0px);
+  }
+
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+#centralimage {
+  position: relative;
+  width: 100%;
+  z-index: 3;
+  left: 6px;
+  transform: translateY(-750px);
+
+  pointer-events: none;
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: scale(.9, 1.1) translateY(-750px);
+  }
+
+  25% {
+    transform: scale(1.05, .95) translateY(0);
+  }
+
+  50% {
+    transform: scale(1, 1) translateY(-4px);
+  }
+
+  100% {
+    transform: scale(1, 1) translateY(-4px);
+  }
+}

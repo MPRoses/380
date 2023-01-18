@@ -1,17 +1,32 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./App.css";
 
-function App() {
+import Home from './home/home';
+import $ from "jquery";
+
+
+const App = ({ children }) => {
+
+  const [backendData, setBackendData] = useState([{}]);
+  
+  useEffect(() => {
+    fetch("/api").then(
+      response => response.json()
+    ).then(
+      data => {
+        setBackendData(data);
+      }
+    )  
+  }, [])
+
+  //       <div> Hello, {(typeof backendData.user === 'undefined') ? (<p>loading...</p>) : (<p>{backendData.user}</p>)}!</div>
+
   return (
-    <div className="App">
-     <form action="APPEL" method="post" 
-            className="form">
-        <button type="submit">Connected?</button>
-      </form>
+      <div className="App">
 
-      <p>Hello world</p>
-
-    </div>
+       <Home />
+  
+      </div>
   );
 }
 
