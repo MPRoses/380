@@ -6,12 +6,8 @@ import $ from "jquery";
 function Preloader() {
 
   $( () => {
+    $(".Preloader-container").css("opacity",  "0")
 
-    setTimeout(() => {
-      
-      $(".Preloader-container").css("opacity",  "0")
-
-    }, 250);
 
   })
   return (
