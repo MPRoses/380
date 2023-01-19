@@ -26,7 +26,7 @@ const App = ({ children }) => {
   return (
     <div className="App">
             <Home />
-  
+            <p>{backendData.user}</p>
     </div>
   );
 }
