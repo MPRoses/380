@@ -1,0 +1,25 @@
+#cursor {
+  pointer-events: none;
+}
+
+#cursor .cursor-circle {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+#cursor .cursor-circle circle  {
+  fill: rgba(255,255,255,1);
+}
+.App {
+  cursor: none;
+}
+#bigcircle-svg {
+  transition: transform .4s ease-in-out;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+#circle-big {
+transition: fill .4s ease-in-out;
+}

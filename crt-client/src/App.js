@@ -31,18 +31,21 @@ function App() {
   //    <p>{backendData.user}</p>
 
   return (
-    <div className="App">
+    <ScrollContainer>
+      <div className="App">
+        <ScrollPage>
+          <Home />
+        </ScrollPage>
       
-      <Home />
-    
-      
+        
 
-      <form method="POST" action="getMessage">
-        <input type="text" name="message" placeholder="vul je message in"></input>
-        <input type="submit" value="submit het maar"></input>
-      </form>
+        <form method="POST" action="getMessage">
+          <input type="text" name="message" placeholder="vul je message in"></input>
+          <input type="submit" value="submit het maar"></input>
+        </form>
 
-    </div>
+      </div>
+    </ScrollContainer>
   );
 }
 

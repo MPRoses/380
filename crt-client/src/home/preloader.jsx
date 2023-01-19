@@ -8,7 +8,6 @@ function Preloader() {
   $( () => {
     $(".Preloader-container").css("opacity",  "0")
 
-
   })
   return (
     <div className="Preloader-container">

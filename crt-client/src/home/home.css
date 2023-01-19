@@ -5,7 +5,9 @@
   src: url('../fonts/RubikSlantedP.otf')
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 
 #left-background {
   width: 100vw;
@@ -27,6 +29,9 @@
 
   width: 50px;
   height: 55%;
+
+  mix-blend-mode: difference;
+  z-index: 3;
 }
 
 #login {
@@ -44,7 +49,7 @@
   font-size: 10px;
   line-height: 12px;
 
-  color: #000000;
+  color: white;
 
   transform: rotate(-90deg);
 
@@ -55,10 +60,20 @@
   top: 30px;
   left: -17.5px;
 
+  transition: opacity .5s cubic-bezier(.49, .99, .62, .97);
+
+}
+#login:hover #login-text {
+  opacity: 0.5;
 }
 
 #login:hover {
   cursor: pointer;
+
+}
+
+#login-image {
+  filter: invert(1);
 }
 
 #logo-container {
@@ -127,15 +142,21 @@
 }
 
 .navbar-item {
-  margin-right: 75px;
+  margin-right: 4vw;
   font-family: 'Lexend';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 15px;
   line-height: 15px;
 
+  mix-blend-mode: difference;
+  color: white;
+
   transition: opacity .5s cubic-bezier(.49, .99, .62, .97);
   transform: translateY(-100px);
+
+  position: relative;
+  z-index: 3;
 }
 
 #navbar-item-1:hover {
@@ -174,31 +195,143 @@
     transform: scale(1, 1) translateY(0);
   }
 }
+#left-container {
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#centraltextleft {
+  font-size: 23vh;
+  line-height: 20vh;
+  position: absolute;
+  color: #29F8E7;
+  top: -7.5vh;
+  width: 200%;
+
+  transform: translateY(-750px) perspective(1000px) rotateX(-12.25deg) rotateY(30deg);
+  font-family: 'Teko';
+  transition: left .04s ease-in-out, top .04s ease-in-out;
+}
+#right-container {
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 50vw;
+  overflow: hidden;
+}
+
+#centraltextright {
+  font-size: 23vh;
+  line-height: 20vh;
+  position: absolute;
+  color: rgb(0, 0, 0);
+  top: -7.5vh;
+  left: -50vw;
+  width: 200%;
+
+  transform: translateY(-750px) perspective(1000px) rotateX(-12.25deg) rotateY(-30deg);
+  font-family: 'Teko';
+
+  transition: left .04s ease-in-out, top .04s ease-in-out;
+}
 
 #centralimage {
   position: relative;
-  width: 100%;
+  width: 90%;
   z-index: 3;
   left: 6px;
   transform: translateY(-750px);
-
+  pointer-events: none;
+  opacity: 0.5;
+}
+#animator {
+  position: relative;
+  z-index: 3;
   pointer-events: none;
 }
 
-@keyframes bounce2 {
+@keyframes bounceleft {
   0% {
-    transform: scale(.9, 1.1) translateY(-750px);
+    transform: scale(.9, 1.1) translateY(-750px) perspective(1000px) rotateX(-12.25deg) rotateY(30deg);
   }
 
   25% {
-    transform: scale(1.05, .95) translateY(0);
+    transform: scale(1.05, .95) translateY(0) perspective(1000px) rotateX(-12.25deg) rotateY(30deg);
   }
 
   50% {
-    transform: scale(1, 1) translateY(-4px);
+    transform: scale(1, 1) translateY(-4px) perspective(1000px) rotateX(-12.25deg) rotateY(30deg);
   }
 
   100% {
-    transform: scale(1, 1) translateY(-4px);
+    transform: scale(1, 1) translateY(-4px) perspective(1000px) rotateX(-12.25deg) rotateY(30deg);
   }
+}
+
+@keyframes bounceright {
+  0% {
+    transform: scale(.9, 1.1) translateY(-750px) perspective(1000px) rotateX(-12.25deg) rotateY(-30deg)
+  }
+
+  25% {
+    transform: scale(1.05, .95) translateY(0) perspective(1000px) rotateX(-12.25deg) rotateY(-30deg);
+  }
+
+  50% {
+    transform: scale(1, 1) translateY(-4px) perspective(1000px) rotateX(-12.25deg) rotateY(-30deg);
+  }
+
+  100% {
+    transform: scale(1, 1) translateY(-4px) perspective(1000px) rotateX(-12.25deg) rotateY(-30deg);
+  }
+}
+
+#socials-fixed {
+  position: fixed;
+  top: calc(100vh - 75px);
+  right: 22px;
+
+  z-index: 3;
+}
+#socials-fixed {
+  mix-blend-mode: difference;
+}
+
+#socials-text {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  text-align: right;
+
+  color: white;
+}
+
+#instagram {
+  width: 13px;
+  filter: invert(1)
+}
+#facebook {
+  width: 13px;
+  margin-right: 20px;
+  filter:invert(1)
+}
+#linkedin {
+  width: 13px;
+  margin-right: 20px;
+  filter: invert(1)
+}
+#instagram:hover {
+  cursor: pointer;
+}
+#facebook:hover {
+  cursor: pointer;
+}
+#linkedin:hover {
+  cursor: pointer;
 }
