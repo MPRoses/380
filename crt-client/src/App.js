@@ -9,7 +9,7 @@ import {ScrollContainer, ScrollPage} from "react-scroll-motion";
 
 function App() {
 
-  const [backendData, setBackendData] = useState([{}]);
+  const [backendData, setBackendData  ] = useState([{}]);
 
 
   function appel() {
@@ -26,13 +26,15 @@ function App() {
 
   //       <div> Hello, {(typeof backendData.user === 'undefined') ? (<p>loading...</p>) : (<p>{backendData.user}</p>)}!</div>
 
+  //      <button id="knop" onClick={()=>appel()}>Call appel(), die callt een fetch, die haalt data op</button>
+
+  //    <p>{backendData.user}</p>
+
   return (
     <div className="App">
-
-      <button id="knop" onClick={()=>appel()}>Call appel(), die callt een fetch, die haalt data op</button>
-
-      <p>{backendData.user}</p>
-
+      
+      <Home />
+    
       
 
       <form method="POST" action="getMessage">

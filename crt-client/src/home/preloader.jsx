@@ -11,7 +11,7 @@ function Preloader() {
       
       $(".Preloader-container").css("opacity",  "0")
 
-    }, 2000);
+    }, 250);
 
   })
   return (

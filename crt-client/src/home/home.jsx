@@ -36,7 +36,7 @@ const Home = ({ children }) => {
       setTimeout(() => {
         $("#left-background").css("transition",  "left 0s");
       }, 650)
-    }, 2750);
+    }, 250);
 
     /*$(window).scroll(function () { 
       var a = ($(window).scrollTop() / window.innerHeight)
