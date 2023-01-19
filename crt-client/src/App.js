@@ -7,26 +7,39 @@ import $ from "jquery";
 import {ScrollContainer, ScrollPage} from "react-scroll-motion";
 
 
-const App = ({ children }) => {
+function App() {
 
   const [backendData, setBackendData] = useState([{}]);
-  
-  useEffect(() => {
-    fetch("/api").then(
-      response => response.json()
-    ).then(
-      data => {
-        setBackendData(data);
-      }
-    )  
-  }, [])
+
+
+  function appel() {
+
+      fetch("/api").then(
+        response => response.json()
+      ).then(
+        data => {
+          setBackendData(data);
+        }
+      )  
+
+  }
 
   //       <div> Hello, {(typeof backendData.user === 'undefined') ? (<p>loading...</p>) : (<p>{backendData.user}</p>)}!</div>
 
   return (
     <div className="App">
-            <Home />
-            <p>{backendData.user}</p>
+
+      <button id="knop" onClick={()=>appel()}>Call appel(), die callt een fetch, die haalt data op</button>
+
+      <p>{backendData.user}</p>
+
+      
+
+      <form method="POST" action="getMessage">
+        <input type="text" name="message" placeholder="vul je message in"></input>
+        <input type="submit" value="submit het maar"></input>
+      </form>
+
     </div>
   );
 }
