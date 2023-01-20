@@ -68,7 +68,7 @@
 }
 
 #login:hover {
-  cursor: pointer;
+  opacity: .5;
 
 }
 
@@ -159,19 +159,8 @@
   z-index: 3;
 }
 
-#navbar-item-1:hover {
+.navbar-item:hover {
   opacity: .5;
-  cursor: pointer;
-}
-
-#navbar-item-2:hover {
-  opacity: .5;
-  cursor: pointer;
-}
-
-#navbar-item-3:hover {
-  opacity: .5;
-  cursor: pointer;
 }
 
 @keyframes bounce {
@@ -325,13 +314,4 @@
   width: 13px;
   margin-right: 20px;
   filter: invert(1)
-}
-#instagram:hover {
-  cursor: pointer;
-}
-#facebook:hover {
-  cursor: pointer;
-}
-#linkedin:hover {
-  cursor: pointer;
 }

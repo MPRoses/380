@@ -6,10 +6,10 @@ import Preloader from './preloader';
 import $ from "jquery";
 
 import login from '../img/login.png';
-import centralimage from '../img/voorbeeld1.png';
 import facebook from '../img/facebook.png';
 import instagram from '../img/instagram.png';
 import linkedin from '../img/linkedin.png';
+import pageindicator from '../img/pageindicator.png';
 
 import { gsap } from "gsap";
 
@@ -60,14 +60,15 @@ const Home = ({ children }) => {
 
     $(".App").on("mousemove", (e) => {
       var a = (e.pageX / window.innerWidth)
-      var b = (e.pageY / window.innerHeight);
+      var b = (-15 + a * 30);
+      var c = (e.pageY / window.innerHeight);
+      var d = (-10 + c * 20);
 
-      $("#centraltextleft").css("left", `calc(-.5vw + ${a} * 1vw)`)
-      $("#centraltextright").css("left", `calc(-.5vw + ${a} * 1vw - 50vw)`)
-      //$("#centraltextright").css("top", `calc(-0.25vh + ${a} * .5vh - 10vh)`)
-
+      gsap.to(".centraltextl", { x: b, y: d, duration: 2 })
+      gsap.to(".centraltextr", { x: b, y: d, duration: 2 })
 
     })
+
 
 
   })
@@ -80,7 +81,7 @@ const Home = ({ children }) => {
 
        
         <div id="left-container">
-        <div id="animator">
+        <div id="animator" className="centraltextl">
 
           <Animator animation={batch(Fade(), Move(), MoveOut(0, 100))}>
 
@@ -97,7 +98,7 @@ const Home = ({ children }) => {
                </div>
 
                  <div id="right-container">
-        <div id="animator">
+        <div id="animator" className="centraltextr">
 
           <Animator animation={batch(Fade(), Move(), MoveOut(0, 100))}>
 
@@ -151,6 +152,10 @@ const Home = ({ children }) => {
             <img src={linkedin} id="linkedin" alt="linkedin" className="hoverable" />
             <img src={facebook} id="facebook" alt="facebook" className="hoverable" />
             <img src={instagram} id="instagram" alt="instagram" className="hoverable" />
+          </div>
+
+          <div id="pageIndicator">
+            <img src={pageindicator} alt="pageindicator"/>
           </div>
 
           <div id="left-background"></div>
