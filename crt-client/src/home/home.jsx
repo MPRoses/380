@@ -49,7 +49,7 @@ const Home = ({ children }) => {
 
     $(window).scroll(function () { 
 
-      if (window.scrollY > 710) {
+      if (window.scrollY > 1 * window.innerHeight) {
         
         $("#left-background").css("left", '-.5vw')
       } else {

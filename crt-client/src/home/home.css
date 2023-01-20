@@ -246,37 +246,37 @@
 
 @keyframes bounceleft {
   0% {
-    transform: scale(.9, 1.1) translateY(-750px) perspective(1000px) rotateX(-12.25deg) rotateY(30deg);
+    transform: scale(.9, 1.1) translateY(-750px) perspective(1350px) rotateX(-12deg) rotateY(30deg);
   }
 
   25% {
-    transform: scale(1.05, .95) translateY(0) perspective(1000px) rotateX(-12.25deg) rotateY(30deg);
+    transform: scale(1.05, .95) translateY(0) perspective(1350px) rotateX(-12deg)rotateY(30deg);
   }
 
   50% {
-    transform: scale(1, 1) translateY(-4px) perspective(1000px) rotateX(-12.25deg) rotateY(30deg);
+    transform: scale(1, 1) translateY(-4px) perspective(1350px) rotateX(-12deg)  rotateY(30deg);
   }
 
   100% {
-    transform: scale(1, 1) translateY(-4px) perspective(1000px) rotateX(-12.25deg) rotateY(30deg);
+    transform: scale(1, 1) translateY(-4px) perspective(1350px) rotateX(-12deg) rotateY(30deg);
   }
 }
 
 @keyframes bounceright {
   0% {
-    transform: scale(.9, 1.1) translateY(-750px) perspective(1000px) rotateX(-12.25deg) rotateY(-30deg)
+    transform: scale(.9, 1.1) translateY(-750px) perspective(1350px) rotateX(-12deg) rotateY(-30deg)
   }
 
   25% {
-    transform: scale(1.05, .95) translateY(0) perspective(1000px) rotateX(-12.25deg) rotateY(-30deg);
+    transform: scale(1.05, .95) translateY(0) perspective(1350px) rotateX(-12deg)  rotateY(-30deg);
   }
 
   50% {
-    transform: scale(1, 1) translateY(-4px) perspective(1000px) rotateX(-12.25deg) rotateY(-30deg);
+    transform: scale(1, 1) translateY(-4px) perspective(1350px) rotateX(-12deg) rotateY(-30deg);
   }
 
   100% {
-    transform: scale(1, 1) translateY(-4px) perspective(1000px) rotateX(-12.25deg) rotateY(-30deg);
+    transform: scale(1, 1) translateY(-4px) perspective(1350px) rotateX(-12deg) rotateY(-30deg);
   }
 }
 
