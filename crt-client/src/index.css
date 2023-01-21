@@ -26,3 +26,8 @@ code {
    border-radius: 8px;
    background-color: #363636;
  }
+
+ :root{
+  --main-color: #F1F2F3;
+  --second-color: #333333
+}
