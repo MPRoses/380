@@ -341,8 +341,10 @@ left: 11vw;
   width: 200px;
   height: 200px;
   position: absolute; 
-  right: calc(50vw - 112.5px);
-  top: -18.3vh;
+  right: calc(50vw - 100px);
+  top: 81.5vh;
+  z-index: 3;
+  mix-blend-mode: difference;
 }
 
 .text{
