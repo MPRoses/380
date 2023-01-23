@@ -5,14 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  overflow-x: hidden;
+  height: 350vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 ::-webkit-scrollbar {
-   width: 12px;
+   width: 12.5px;
  }
 
 ::-webkit-scrollbar-track {
@@ -29,5 +33,9 @@ code {
 
  :root{
   --main-color: #F1F2F3;
-  --second-color: #333333
+  --second-color: #333333;
+  --color-primary: #56677e;
+  --color-secondary: #101118;
+  --base-duration: 2s;
+  --base-ease: cubic-bezier(.11,.75,0,.94);
 }

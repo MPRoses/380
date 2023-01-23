@@ -10,3 +10,19 @@
   width: 100px;
   height: 100px;
 }
+#fullscreenbg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  background-color: #1E2120;
+  z-index: 999;
+  transition: top .75s cubic-bezier(.49, .99, .62, .97);
+}
+#cross-login {
+  width: 25px;
+  right: 60px;
+  top: 18px;
+  position: absolute;
+}
