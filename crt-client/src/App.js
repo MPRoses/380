@@ -41,20 +41,19 @@ function App() {
 
 
     if (window.location.href.includes("login")) {
+      
       $("#fullscreenbg").css("top", "0")
     }
 
 
     $("#login").on("click", () => {
-      if (window.location.href.includes("login")) {
-        window.location.href = window.location.href;
-      } else {
-        window.location.href = `${window.location.href}login`
-      }
-     
+      window.history.replaceState({page:2},'JavaScript','/login/');
+      $("#fullscreenbg").css("top", "0")
     })
     $("#cross-login").on("click", () => {
       $("#fullscreenbg").css("top", "100vh")
+      window.history.replaceState({page:2},'JavaScript','/');
+      
     })
 
 
