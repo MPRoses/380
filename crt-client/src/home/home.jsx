@@ -13,10 +13,10 @@ import android from '../img/android.png';
 import magister from '../img/somNmagister.png';
 import lock from '../img/lock.png';
 import circle from '../img/circle.png';
-import review from '../img/review.png'; 
-import stars from '../img/stars.png'; 
-import enabledcircle from '../img/activecircle.png'; 
-import disabledcircle from '../img/disabledcircle.png'; 
+import review from '../img/review.png';
+import stars from '../img/stars.png';
+import enabledcircle from '../img/activecircle.png';
+import disabledcircle from '../img/disabledcircle.png';
 
 
 import pageindicator from '../img/pageindicator.png';
@@ -29,7 +29,7 @@ import { gsap } from "gsap";
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 
 const Home = ({ children }) => {
-  // todo change navbar <p> to <a> 
+  // todo change navbar <p> to <a>
 
   var a = 1;
 
@@ -41,7 +41,7 @@ const Home = ({ children }) => {
 
    $( function () {
 
-   
+
 
     // preloader
     $("#logo-container").css("opacity", "1");
@@ -55,7 +55,7 @@ const Home = ({ children }) => {
       $("#centraltextright").css("animation", "bounceright 6s cubic-bezier(0.280, 0.840, 0.420, 1) 1 forwards");
       setTimeout(() => {
         $("#navbar-item-2").css("animation", "bounce 2s cubic-bezier(0.280, 0.840, 0.420, 1) 1 forwards")
-        
+
         setTimeout(() => {
         $("#navbar-item-1").css("animation", "bounce 2s cubic-bezier(0.280, 0.840, 0.420, 1) 1 forwards")
       }, 250);
@@ -68,13 +68,13 @@ const Home = ({ children }) => {
     const text = document.querySelector(".circular-text .text")
     const rotate = new CircleType(text).radius(15)
 
-    $(window).scroll(function () { 
+    $(window).scroll(function () {
       gsap.to(".circular-text .text", {rotate: (window.scrollY * 0.15), duration: 2});
       if (window.scrollY > 1 * window.innerHeight && window.scrollY < 1.8 * window.innerHeight) {
         $("#page-indicator-text").css("opacity", "0")
         $("#page-indicator-text2").css("opacity", "1")
         $("#left-background").css("left", '-.5vw')
-        $(".fadeinS2").css("opacity",  "1"); 
+        $(".fadeinS2").css("opacity",  "1");
         $("#S2-head").css("top",  "50px");
         $("#S2-description").css("top",  "110px");
         $("#Apple-slide, #Register-slide, #Slimmer-slide").css("top",  "200px");
@@ -103,16 +103,16 @@ const Home = ({ children }) => {
         $(".perspective-item").css("transform", "translate(0, 90px)")
         $("#left-background").css("top", '-100vh')
       }
-     
+
     })
 
     $(".App").on("mousemove", (e) => {
 
-      if (window.scrollY < 1 * window.innerHeight && $("#fullscreenbg").css("top") !== "0px") {  
+      if (window.scrollY < 1 * window.innerHeight && $("#fullscreenbg").css("top") !== "0px") {
         var a = (e.pageX / window.innerWidth)
         var b = (-15 + a * 30);
         var c = (e.pageY / window.innerHeight);
-        var d = (-10 + c * 20);    
+        var d = (-10 + c * 20);
       gsap.to("#centraltextleftone", { x: (b * 5), y: d, duration: 2 })
       gsap.to("#centraltextlefttwo", { x: (b * 2.5), y: d, duration: 2 })
       gsap.to("#centraltextleftthree", { x: b, y: d, duration: 2 })
@@ -135,7 +135,7 @@ const Home = ({ children }) => {
 
     Aslide.addEventListener('mouseleave', function() {
       this.style.setProperty('--x', 0)
-      this.style.setProperty('--y', 0) 
+      this.style.setProperty('--y', 0)
     })
 
     const Bslide = document.getElementById('Android-slide');
@@ -148,7 +148,7 @@ const Home = ({ children }) => {
 
     Bslide.addEventListener('mouseleave', function() {
       this.style.setProperty('--x', 0)
-      this.style.setProperty('--y', 0) 
+      this.style.setProperty('--y', 0)
     })
 
     const Cslide = document.getElementById('Register-slide');
@@ -161,7 +161,7 @@ const Home = ({ children }) => {
 
     Cslide.addEventListener('mouseleave', function() {
       this.style.setProperty('--x', 0)
-      this.style.setProperty('--y', 0) 
+      this.style.setProperty('--y', 0)
     })
 
     const Dslide = document.getElementById('Slimmer-slide');
@@ -174,7 +174,7 @@ const Home = ({ children }) => {
 
     Dslide.addEventListener('mouseleave', function() {
       this.style.setProperty('--x', 0)
-      this.style.setProperty('--y', 0) 
+      this.style.setProperty('--y', 0)
     })
 
     const Eslide = document.getElementById('Review-slide');
@@ -187,7 +187,7 @@ const Home = ({ children }) => {
 
     Eslide.addEventListener('mouseleave', function() {
       this.style.setProperty('--x', 0)
-      this.style.setProperty('--y', 0) 
+      this.style.setProperty('--y', 0)
     })
 
 
@@ -223,21 +223,128 @@ const Home = ({ children }) => {
 
   })
 
-   
+    /* <div id="S2-head" className="fadeinS2">
+        Soepele ervaring op elk apparaat
+      </div>
+    <div id="S2-description" className="fadeinS2">
+      <p>
+      Of je nu achter <span>je bureau of op school zit</span> - Pentagon helpt je met het moeilijke door het voor je uit te stippelen
+      </p>
+    </div>
+    <div id="S2-cubes">
+      <div id="Apple" onClick={() => openInNewTab('https://apple.nl')} className="small-cube hoverable fadeinS2">
+      <div id="Apple-slide" className="slide">
+          <div className="slide__bg-wrapper Apple-wrapper">
+          </div>
+          <div className="slide__content">
+            <p className="cube-title">IOS</p>
+            <p className="cube-description">Nu beschikbaar in de App Store</p>
+            <img className="cube-image" src={apple} alt="apple" />
+          </div>
 
-  // todo change navbar <p> to <a> 
+        </div>
+      </div>
+      <div id="Android" onClick={() => openInNewTab('https://google.nl')}  className="small-cube hoverable fadeinS2">
+      <div id="Android-slide" className="slide">
+          <div className="slide__bg-wrapper Android-wrapper">
+          </div>
+          <div className="slide__content">
+            <p className="cube-title">ANDROID</p>
+            <p className="cube-description">Nu beschikbaar in de Google Play Store</p>
+            <img className="cube-image" src={android} alt="android" />
+          </div>
+
+        </div>
+
+      </div>
+      <div id="Register" className="small-cube hoverable fadeinS2">
+      <div id="Register-slide" className="slide">
+          <div className="slide__bg-wrapper Register-wrapper">
+            <img className="cube-image-register" src={magister} alt="images" />
+          </div>
+          <div className="slide__content">
+            <p className="cube-title">GEMAKKELIJK AANMELDEN</p>
+            <p className="cube-description">Meld veilig en eenvoudig aan met
+Somtoday of Magister</p>
+            <img className="cube-image-up" src={lock} alt="lock" />
+          </div>
+
+        </div>
+
+      </div>
+      <div id="Slimmer" className="small-cube hoverable fadeinS2">
+      <div id="Slimmer-slide" className="slide">
+          <div className="slide__bg-wrapper Slimmer-wrapper">
+          </div>
+          <div className="slide__content">
+            <p className="cube-title">LEER SLIMMER</p>
+            <p className="cube-description">Leer gerichter met Pentagon door handige adviezen</p>
+            <img className="cube-image" src={circle} alt="circle" />
+          </div>
+
+        </div>
+
+      </div>
+      <div id="Review" className="small-cube hoverable fadeinS2">
+      <div id="Review-slide" className="slide">2
+          <div className="slide__bg-wrapper Review-wrapper">
+            <img className="cube-image-review" src={review} alt="images" />
+          </div>
+          <div className="slide__content">
+            <p className="cube-title-rating">4,4</p>
+            <img className="cube-image-stars" src={stars} alt="images" />
+            <p className="cube-description-rating">App rating</p>
+            <p className="cube-description-rating2">Tantoeleipe app jonguh. echt helemaal
+koeke of nie dan! super ( :</p>
+          </div>
+
+        </div>
+
+      </div>
+      <div id="Review-indicator" className="fadeinS2">
+        <img src={enabledcircle} alt="indicator" id="indicator-circle-1" className="indicator-circle"/>
+        <img src={disabledcircle} alt="indicator" id="indicator-circle-2" className="indicator-circle"/>
+        <img src={disabledcircle} alt="indicator" id="indicator-circle-3" className="indicator-circle"/>
+        <img src={disabledcircle} alt="indicator" id="indicator-circle-4" className="indicator-circle"/>
+        <img src={disabledcircle} alt="indicator" id="indicator-circle-5" className="indicator-circle"/>
+      </div>
+    </div>
+    <div className="perspective-text fadeinS2">
+      <div className="perspective-line">
+        <p className="perspective-item"></p>
+        <p className="perspective-item">Leer</p>
+      </div>
+      <div className="perspective-line">
+        <p className="perspective-item">Leer</p>
+        <p className="perspective-item">Slimmer</p>
+      </div>
+      <div className="perspective-line">
+        <p className="perspective-item">Slimmer</p>
+        <p className="perspective-item">Niet</p>
+      </div>
+      <div className="perspective-line">
+        <p className="perspective-item">Niet</p>
+        <p className="perspective-item">Harder</p>
+      </div>
+      <div className="perspective-line">
+        <p className="perspective-item">Harder</p>
+        <p className="perspective-item"></p>
+      </div>
+    </div> */
+
+  // todo change navbar <p> to <a>
 
 
   return (
 
       <div className="App">
-        
+
 
       <Cursor />
       <Preloader />
 
-      
-          
+
+
       <div id="Hero">
       <div id="left-container">
         <div id="animator" className="centraltextl">
@@ -284,7 +391,7 @@ const Home = ({ children }) => {
             HAAL<br></br>BETERE<br></br>RESULTATEN
           </div>
           <div id="navbar">
-          
+
           <p className="navbar-item hoverable" id="navbar-item-1">Download de app</p>
             <p className="navbar-item hoverable" id="navbar-item-2">Ontmoet het team</p>
             <p className="navbar-item hoverable" id="navbar-item-3">Over ons</p>
@@ -292,8 +399,8 @@ const Home = ({ children }) => {
 
           </div>
 
-          <div className="container fadein">  
-        
+          <div className="container fadein">
+
     </div>
         </div>
       <div id="Fixed">
@@ -308,7 +415,7 @@ const Home = ({ children }) => {
             </div>
           </div>
 
-         
+
 
 
 
@@ -346,115 +453,136 @@ const Home = ({ children }) => {
                       <li></li>
               </ul>
       </div >
+      <div id="S2-head" className="fadeinS2">
+         Soepele ervaring op elk apparaat
+       </div>
+     <div id="S2-description" className="fadeinS2">
+       <p>
+       Of je nu achter <span>je bureau of op school zit</span> - Pentagon helpt je met het moeilijke door het voor je uit te stippelen
+       </p>
+     </div>
+     <div id="S2-cubes">
+       <div id="Apple" onClick={() => openInNewTab('https://apple.nl')} className="small-cube hoverable fadeinS2">
+       <div id="Apple-slide" className="slide">
+           <div className="slide__bg-wrapper Apple-wrapper">
+           </div>
+           <div className="slide__content">
+             <p className="cube-title">IOS</p>
+             <p className="cube-description">Nu beschikbaar in de App Store</p>
+             <img className="cube-image" src={apple} alt="apple" />
+           </div>
 
-          <div id="S2-head" className="fadeinS2">
-              Soepele ervaring op elk apparaat
-            </div>
-          <div id="S2-description" className="fadeinS2">
-            <p> 
-            Of je nu achter <span>je bureau of op school zit</span> - Pentagon helpt je met het moeilijke door het voor je uit te stippelen
-            </p>
-          </div>
-          <div id="S2-cubes">
-            <div id="Apple" onClick={() => openInNewTab('https://apple.nl')} className="small-cube hoverable fadeinS2">
-            <div id="Apple-slide" className="slide">
-                <div className="slide__bg-wrapper Apple-wrapper">
-                </div>
-                <div className="slide__content">
-                  <p className="cube-title">IOS</p>
-                  <p className="cube-description">Nu beschikbaar in de App Store</p>
-                  <img className="cube-image" src={apple} alt="apple" />
-                </div>
+         </div>
+       </div>
+       <div id="Android" onClick={() => openInNewTab('https://google.nl')}  className="small-cube hoverable fadeinS2">
+       <div id="Android-slide" className="slide">
+           <div className="slide__bg-wrapper Android-wrapper">
+           </div>
+           <div className="slide__content">
+             <p className="cube-title">ANDROID</p>
+             <p className="cube-description">Nu beschikbaar in de Google Play Store</p>
+             <img className="cube-image" src={android} alt="android" />
+           </div>
 
-              </div>
-            </div>
-            <div id="Android" onClick={() => openInNewTab('https://google.nl')}  className="small-cube hoverable fadeinS2">
-            <div id="Android-slide" className="slide">
-                <div className="slide__bg-wrapper Android-wrapper">
-                </div>
-                <div className="slide__content">
-                  <p className="cube-title">ANDROID</p>
-                  <p className="cube-description">Nu beschikbaar in de Google Play Store</p>
-                  <img className="cube-image" src={android} alt="android" />
-                </div>
+         </div>
 
-              </div>
-              
-            </div>
-            <div id="Register" className="small-cube hoverable fadeinS2">
-            <div id="Register-slide" className="slide">
-                <div className="slide__bg-wrapper Register-wrapper">
-                  <img className="cube-image-register" src={magister} alt="images" />
-                </div>
-                <div className="slide__content">
-                  <p className="cube-title">GEMAKKELIJK AANMELDEN</p>
-                  <p className="cube-description">Meld veilig en eenvoudig aan met 
-  Somtoday of Magister</p>
-                  <img className="cube-image-up" src={lock} alt="lock" />
-                </div>
+       </div>
+       <div id="Register" className="small-cube hoverable fadeinS2">
+       <div id="Register-slide" className="slide">
+           <div className="slide__bg-wrapper Register-wrapper">
+             <img className="cube-image-register" src={magister} alt="images" />
+           </div>
+           <div className="slide__content">
+             <p className="cube-title">GEMAKKELIJK AANMELDEN</p>
+             <p className="cube-description">Meld veilig en eenvoudig aan met
+ Somtoday of Magister</p>
+             <img className="cube-image-up" src={lock} alt="lock" />
+           </div>
 
-              </div>
-              
-            </div>
-            <div id="Slimmer" className="small-cube hoverable fadeinS2">
-            <div id="Slimmer-slide" className="slide">
-                <div className="slide__bg-wrapper Slimmer-wrapper">
-                </div>
-                <div className="slide__content">
-                  <p className="cube-title">LEER SLIMMER</p>
-                  <p className="cube-description">Leer gerichter met Pentagon door handige adviezen</p>
-                  <img className="cube-image" src={circle} alt="circle" />
-                </div>
+         </div>
 
-              </div>
-              
-            </div>
-            <div id="Review" className="small-cube hoverable fadeinS2">
-            <div id="Review-slide" className="slide">2
-                <div className="slide__bg-wrapper Review-wrapper">
-                  <img className="cube-image-review" src={review} alt="images" />
-                </div>
-                <div className="slide__content">
-                  <p className="cube-title-rating">4,4</p>
-                  <img className="cube-image-stars" src={stars} alt="images" />
-                  <p className="cube-description-rating">App rating</p>
-                  <p className="cube-description-rating2">Tantoeleipe app jonguh. echt helemaal
-  koeke of nie dan! super ( :</p>
-                </div>
+       </div>
+       <div id="Slimmer" className="small-cube hoverable fadeinS2">
+       <div id="Slimmer-slide" className="slide">
+           <div className="slide__bg-wrapper Slimmer-wrapper">
+           </div>
+           <div className="slide__content">
+             <p className="cube-title">LEER SLIMMER</p>
+             <p className="cube-description">Leer gerichter met Pentagon door handige adviezen</p>
+             <img className="cube-image" src={circle} alt="circle" />
+           </div>
 
-              </div>
-              
-            </div>
-            <div id="Review-indicator" className="fadeinS2">
-              <img src={enabledcircle} alt="indicator" id="indicator-circle-1" className="indicator-circle"/>
-              <img src={disabledcircle} alt="indicator" id="indicator-circle-2" className="indicator-circle"/>
-              <img src={disabledcircle} alt="indicator" id="indicator-circle-3" className="indicator-circle"/>
-              <img src={disabledcircle} alt="indicator" id="indicator-circle-4" className="indicator-circle"/>
-              <img src={disabledcircle} alt="indicator" id="indicator-circle-5" className="indicator-circle"/>
-            </div>
-          </div>
-          <div className="perspective-text fadeinS2">
-            <div className="perspective-line">
-              <p className="perspective-item"></p>
-              <p className="perspective-item">Leer</p>
-            </div>
-            <div className="perspective-line">
-              <p className="perspective-item">Leer</p>
-              <p className="perspective-item">Slimmer</p>
-            </div>
-            <div className="perspective-line">
-              <p className="perspective-item">Slimmer</p>
-              <p className="perspective-item">Niet</p>
-            </div>
-            <div className="perspective-line">
-              <p className="perspective-item">Niet</p>
-              <p className="perspective-item">Harder</p>
-            </div>
-            <div className="perspective-line">
-              <p className="perspective-item">Harder</p>
-              <p className="perspective-item"></p>
-            </div>
-          </div>
+         </div>
+
+       </div>
+       <div id="Review" className="small-cube hoverable fadeinS2">
+       <div id="Review-slide" className="slide">2
+           <div className="slide__bg-wrapper Review-wrapper">
+             <img className="cube-image-review" src={review} alt="images" />
+           </div>
+           <div className="slide__content">
+             <p className="cube-title-rating">4,4</p>
+             <img className="cube-image-stars" src={stars} alt="images" />
+             <p className="cube-description-rating">App rating</p>
+             <p className="cube-description-rating2">Tantoeleipe app jonguh. echt helemaal
+ koeke of nie dan! super ( :</p>
+           </div>
+
+         </div>
+
+       </div>
+       <div id="Review-indicator" className="fadeinS2">
+         <img src={enabledcircle} alt="indicator" id="indicator-circle-1" className="indicator-circle"/>
+         <img src={disabledcircle} alt="indicator" id="indicator-circle-2" className="indicator-circle"/>
+         <img src={disabledcircle} alt="indicator" id="indicator-circle-3" className="indicator-circle"/>
+         <img src={disabledcircle} alt="indicator" id="indicator-circle-4" className="indicator-circle"/>
+         <img src={disabledcircle} alt="indicator" id="indicator-circle-5" className="indicator-circle"/>
+       </div>
+     </div>
+     <div className="perspective-text fadeinS2">
+       <div className="perspective-line">
+         <p className="perspective-item"></p>
+         <p className="perspective-item">Leer</p>
+       </div>
+       <div className="perspective-line">
+         <p className="perspective-item">Leer</p>
+         <p className="perspective-item">Slimmer</p>
+       </div>
+       <div className="perspective-line">
+         <p className="perspective-item">Slimmer</p>
+         <p className="perspective-item">Niet</p>
+       </div>
+       <div className="perspective-line">
+         <p className="perspective-item">Niet</p>
+         <p className="perspective-item">Harder</p>
+       </div>
+       <div className="perspective-line">
+         <p className="perspective-item">Harder</p>
+         <p className="perspective-item"></p>
+       </div>
+     </div>
+      <div className="perspective-text fadeinS2">
+        <div className="perspective-line">
+          <p className="perspective-item"></p>
+          <p className="perspective-item">Leer</p>
+        </div>
+        <div className="perspective-line">
+          <p className="perspective-item">Leer</p>
+          <p className="perspective-item">Slimmer</p>
+        </div>
+        <div className="perspective-line">
+          <p className="perspective-item">Slimmer</p>
+          <p className="perspective-item">Niet</p>
+        </div>
+        <div className="perspective-line">
+          <p className="perspective-item">Niet</p>
+          <p className="perspective-item">Harder</p>
+        </div>
+        <div className="perspective-line">
+          <p className="perspective-item">Harder</p>
+          <p className="perspective-item"></p>
+        </div>
+      </div>
 
         </div>
       </div>

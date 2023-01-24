@@ -17,7 +17,7 @@
   position: fixed;
   top: 0;
   left: -100vw;
-  background-color: #1E2120;
+  background-color: #0B0C0C;
 
   transition: left 0s, top 1s ease-in-out;
 }
@@ -343,7 +343,7 @@ left: 9vw;
   justify-content: center;
   width: 200px;
   height: 200px;
-  position: absolute; 
+  position: absolute;
   right: calc(50vw - 112.5px);
   top: 81.5vh;
   z-index: 3;
@@ -375,7 +375,7 @@ left: 9vw;
   display: block;
   width: 100%;
   height: 100%;
-  fill: white;  
+  fill: white;
   animation: spin 40s linear infinite forwards;
 }
 
@@ -458,12 +458,12 @@ left: 9vw;
 }
 #Apple {
   transition: opacity .75s ease-in-out .1s;
-  
+
 }
 .Apple-wrapper {
   background: linear-gradient(180deg, #1B2B3B 0%, rgba(27, 43, 59, 0) 100%);
   box-shadow: 0 0 15px 1px #1B2B3B;
-  
+
 }
 
  .slide__image {
@@ -487,7 +487,7 @@ left: 9vw;
 	 z-index: 1;
    top: 200px;
    left: 7vw;
-   transition: transform 1s cubic-bezier(.11,.75,0,.94); 
+   transition: transform 1s cubic-bezier(.11,.75,0,.94);
 }
  .slide:after {
 	 content: '';
@@ -516,7 +516,7 @@ left: 9vw;
    transition: transform 1s cubic-bezier(.11,.75,0,.94);
 	 user-select: none;
 	 width: 110%;
-   
+
 }
  .slide__headline {
 	 font-size: 8vmin;
@@ -536,7 +536,7 @@ left: 9vw;
 	 top: 0;
 	 transition: transform 1s cubic-bezier(.11,.75,0,.94);
 	 width: 100%;
-   
+
 	 z-index: 1;
 }
  .slide__content > * + * {
@@ -663,7 +663,7 @@ left: 9vw;
   position: relative;
   left: 42vw;
   transition: transform 1s cubic-bezier(.11,.75,0,.94), opacity .75s ease-in-out .4s;
-  
+
 }
 .Slimmer-wrapper {
   background: linear-gradient(180deg, #2C64F7 0%, rgba(44, 100, 247, 0) 100%);
@@ -697,7 +697,7 @@ left: 9vw;
   width: 22.5vw;
   border-radius: 50px;
   box-shadow: 0 0 15px 1px #776CF9;
-  
+
 }
 #Review-indicator {
   position: absolute;
@@ -710,7 +710,7 @@ left: 9vw;
 .indicator-circle {
   display: block;
   margin-bottom: 1.6vw;
-  
+
 }
 
 .area{
@@ -740,7 +740,7 @@ left: 9vw;
   background: rgba(255, 255, 255, 0.2);
   animation: animate 25s linear infinite;
   bottom: -150px;
-  
+
 }
 
 .circles li:nth-child(1){
@@ -864,7 +864,7 @@ left: 9vw;
   color: white;
 }
 .perspective-line:nth-child(even) {
-  transform: skew(0deg, 30deg) scaleY(1.334) 
+  transform: skew(0deg, 30deg) scaleY(1.334)
 }
 .perspective-text:hover .perspective-item {
   transform: translate(0, -90px) !important;
